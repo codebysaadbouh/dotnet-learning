@@ -9,7 +9,7 @@ namespace premier_program
         {
             
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-
+            /*
             // Déclaration de variable
             int age_int =0;
             string age_str;
@@ -37,7 +37,16 @@ namespace premier_program
                 Console.WriteLine("Vous n'avez pas saisi votre age au bon format");
             }
 
-            
+            */
+
+            int i = 0;
+            // Boucle While
+            while (i <= 10)
+            {
+                Console.WriteLine("2 x " + i + " = " + 2 * i);
+                i++;  // Incrémentation de la valeur i; 
+            }
+            Console.WriteLine("Fin de boucle ! "); 
 
         }
     }
