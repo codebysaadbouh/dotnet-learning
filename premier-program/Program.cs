@@ -54,10 +54,13 @@ namespace premier_program
         }
 
         
-        static void DisplayResult(int age_int, string nom)
+        static void DisplayResult(int age_int, string nom, float taille = 0)
         {
             // DISPLAY THE RESULTS
             Console.WriteLine("Vous vous appellez " + nom + " et vous avez " + age_int + " an(s)");
+
+            //Console.WriteLine($"Vous vous appellez {nom} et vous avez {age_int}an(s)");
+
             age_int += 1;
             Console.WriteLine("Bientôt vous aurez " + age_int + " an(s)");
 
@@ -97,6 +100,11 @@ namespace premier_program
             {
                 Console.WriteLine("Vous êtes mineur !"); 
             }
+
+            if(taille != 0)
+            {
+                Console.WriteLine("Vous faites " + taille + "m"!);
+            }
         }
 
         // When a function does not return a result the output type is called "void"
@@ -105,20 +113,30 @@ namespace premier_program
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             // Here "1" is called "argument"
-            string nom_1 = DemanderNom(1); 
-            string nom_2 = DemanderNom(2); 
+            //string nom_1 = DemanderNom(1); 
+            //string nom_2 = DemanderNom(2); 
 
-            int age_1 = DemanderAge(nom_1);
-            int age_2 = DemanderAge(nom_2);
+            //int age_1 = DemanderAge(nom_1);
+            //int age_2 = DemanderAge(nom_2);
 
-            Console.WriteLine(); 
-            DisplayResult(age_1, nom_1);
-            Console.WriteLine(); 
-            DisplayResult(age_2, nom_2);
-            Console.WriteLine(); 
+            //Console.WriteLine(); 
+            //DisplayResult(age_1, nom_1);
+            //Console.WriteLine(); 
+            //DisplayResult(age_2, nom_2);
+            //Console.WriteLine(); 
 
-            
+            // Les paramètres opt. ne se mettent qu'a la fin tjrs !!!!!!
 
+
+            //Les boucles for(){}
+            const int NBR_PERSONNES = 3; 
+            for(int i = 1; i <= NBR_PERSONNES;  i++ )
+            {
+                string nom = DemanderNom(i);
+                int age = DemanderAge(nom);
+                DisplayResult(age, nom, 1.78f);
+
+            }
         }
     }
 }
